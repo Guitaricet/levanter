@@ -1,0 +1,3 @@
+id: text-machine-lab/constrained_language
+cache_dir: "gs://vlialin-levanter/dataset_cache/minibert"
+text_key: TEXT

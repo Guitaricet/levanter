@@ -1,18 +1,18 @@
-data: !include data/openwebtext_source.yaml
+data: !include data/minibert.yaml
 model:
   type: gpt2
   hidden_dim: 768
   num_heads: 12
   num_layers: 12
   seq_len: 1024
-  gradient_checkpointing: true
+  gradient_checkpointing: false
   scale_attn_by_inverse_layer_idx: true
 trainer:
   wandb:
     project: "levanter"
-    tags: [ "openwebtext", "gpt2"]
+    tags: [ "debug", "gpt2-small"]
 
-  mp: p=f32,c=bfloat16
+  mp: bfloat16
   model_axis_size: 1
   per_device_parallelism: 4
 
